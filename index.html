@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- SEO y Metadatos -->
+  <title>LÚMINA BEAUTY | Tienda Virtual de Cosméticos y Alta Belleza</title>
+  <meta name="description" content="Descubre LÚMINA BEAUTY: cosméticos de alta gama, cuidado facial botánico, labiales aterciopelados y fórmulas limpias 100% libres de crueldad animal. Envíos a toda Colombia." />
+  <meta name="keywords" content="cosméticos, maquillaje, cuidado facial, skincare, labiales, bases, belleza, Colombia, Cruelty Free" />
+  <meta name="author" content="Lúmina Beauty" />
+
+  <!-- Metadatos Open Graph / Redes Sociales -->
+  <meta property="og:title" content="LÚMINA BEAUTY | Descubre tu mejor versión" />
+  <meta property="og:description" content="Maquillaje de alta definición y tratamientos para el cuidado de la piel con ingredientes botánicos." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/images/hero-banner.jpg" />
+
+  <!-- Hojas de Estilos en Cascada (Arquitectura Especificación Técnica) -->
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+
+  <!-- Favicon SVG en línea elegante -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✨</text></svg>" />
+</head>
+<body>
+
+  <!-- ==========================================================================
+       TOP BAR DE ANUNCIOS Y PROMOCIONES
+       ========================================================================== -->
+  <aside class="top-bar-anuncio" aria-label="Anuncios de la tienda">
+    <span>✨ Envío gratis en pedidos desde <strong>$120.000 COP</strong></span>
+    <span class="top-bar-destacado">|</span>
+    <span>Aplica el código <strong>LUMINA10</strong> y obtén <strong>10% OFF</strong></span>
+  </aside>
+
+  <!-- ==========================================================================
+       4.1 ENCABEZADO Y NAVEGACIÓN PRINCIPAL
+       ========================================================================== -->
+  <header class="header-principal" id="header-tienda">
+    <div class="contenedor header-contenedor">
+      
+      <!-- Logotipo de la Marca -->
+      <a href="#inicio" class="logo-lumina" aria-label="Ir al inicio de Lúmina Beauty">
+        <span class="logo-texto">LÚMINA</span>
+        <span class="logo-subtexto">BEAUTY • ÉLIXIR</span>
+      </a>
+
+      <!-- Menú de Navegación de Categorías -->
+      <nav class="nav-menu" id="nav-menu-principal" aria-label="Navegación principal">
+        <a href="#inicio" class="nav-link">Inicio</a>
+        <a href="#catalogo" class="nav-link">Catálogo</a>
+        <a href="#categorias" class="nav-link">Categorías</a>
+        <a href="#beneficios" class="nav-link">Filosofía</a>
+        <a href="#faq" class="nav-link">Preguntas Frecuentes</a>
+      </nav>
+
+      <!-- Buscador Rápido en Header (Escritorio) -->
+      <div class="header-buscador-wrap" role="search">
+        <svg class="header-buscador-icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input 
+          type="search" 
+          id="input-busqueda-header" 
+          class="header-buscador-input" 
+          placeholder="Buscar cosmético..." 
+          aria-label="Buscar cosméticos"
+        />
+      </div>
+
+      <!-- Acciones del Usuario (Favoritos, Carrito, Menú Móvil) -->
+      <div class="header-acciones">
+        
+        <!-- Botón Favoritos -->
+        <button 
+          type="button" 
+          class="btn-icono-header btn-abrir-favoritos" 
+          id="btn-abrir-favoritos"
+          aria-label="Ver lista de favoritos"
+          title="Mis Favoritos"
+        >
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+          </svg>
+          <span class="badge-contador badge-favoritos-conteo oculto" aria-live="polite">0</span>
+        </button>
+
+        <!-- Botón Carrito de Compras -->
+        <button 
+          type="button" 
+          class="btn-icono-header btn-abrir-carrito" 
+          id="btn-abrir-carrito"
+          aria-label="Abrir carrito de compras"
+          title="Mi Carrito"
+        >
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span class="badge-contador badge-carrito-conteo oculto" aria-live="polite">0</span>
+        </button>
+
+        <!-- Botón Hamburguesa Móvil -->
+        <button 
+          type="button" 
+          class="btn-menu-hamburguesa" 
+          id="btn-menu-movil" 
+          aria-label="Abrir menú de navegación"
+          aria-expanded="false"
+          aria-controls="nav-menu-principal"
+        >
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+
+      </div>
+    </div>
+  </header>
+
+  <main id="contenido-principal">
+
+    <!-- ==========================================================================
+         4.2 BANNER PRINCIPAL (HERO EDITORIAL)
+         ========================================================================== -->
+    <section class="hero-seccion" id="inicio">
+      <div class="contenedor hero-grid">
+        
+        <div class="hero-contenido">
+          <div class="hero-tag">
+            <span class="hero-tag-punto"></span>
+            <span>Colección Alta Luminosidad 2026</span>
+          </div>
+          
+          <h1 class="hero-titulo">
+            Descubre tu <span>mejor versión</span> con pureza botánica
+          </h1>
+          
+          <p class="hero-descripcion">
+            Fórmulas limpias, texturas sedosas y luminosidad natural. Diseñadas para realzar tu belleza auténtica con activos botánicos dermatológicamente probados.
+          </p>
+
+          <div class="hero-botones">
+            <a href="#catalogo" class="btn-primario" id="btn-hero-catalogo">
+              <span>Explorar Colección</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="#categorias" class="btn-secundario">
+              <span>Ver Categorías</span>
+            </a>
+          </div>
+
+          <div class="hero-destacados-lista">
+            <div class="hero-destacado-item">
+              <svg class="hero-destacado-icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+              <span>100% Cruelty Free</span>
+            </div>
+            <div class="hero-destacado-item">
+              <svg class="hero-destacado-icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+              <span>Dermatológicamente Testeado</span>
+            </div>
+            <div class="hero-destacado-item">
+              <svg class="hero-destacado-icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="m4.93 4.93 4.24 4.24"></path>
+                <path d="m14.83 9.17 4.24-4.24"></path>
+                <path d="m14.83 14.83 4.24 4.24"></path>
+                <path d="m9.17 14.83-4.24 4.24"></path>
+              </svg>
+              <span>Fórmulas Limpias</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-imagen-col">
+          <div class="hero-imagen-marco">
+            <img 
+              src="assets/images/hero-banner.jpg" 
+              alt="Bodegón editorial de cosméticos LÚMINA con sérums, labiales y brochas en tonos nude y rosa"
+              width="800" 
+              height="600"
+            />
+          </div>
+          
+          <div class="hero-flotante-badge" aria-hidden="true">
+            <div class="flotante-icono">✨</div>
+            <div>
+              <p class="flotante-texto-tit">Bestseller del Mes</p>
+              <p class="flotante-texto-sub">Sérum Aura 24K Luminance</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         FRANJA DE BENEFICIOS Y CONFIANZA
+         ========================================================================== -->
+    <section class="franja-beneficios" id="beneficios" aria-label="Compromisos de la tienda">
+      <div class="contenedor beneficios-grid">
+        
+        <div class="beneficio-card">
+          <div class="beneficio-icono-box" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+              <rect x="1" y="3" width="15" height="13"></rect>
+              <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+              <circle cx="5.5" cy="18.5" r="2.5"></circle>
+              <circle cx="18.5" cy="18.5" r="2.5"></circle>
+            </svg>
+          </div>
+          <div>
+            <h3 class="beneficio-titulo">Envíos a toda Colombia</h3>
+            <p class="beneficio-desc">Entrega segura en 2 a 4 días hábiles en las principales ciudades.</p>
+          </div>
+        </div>
+
+        <div class="beneficio-card">
+          <div class="beneficio-icono-box" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+            </svg>
+          </div>
+          <div>
+            <h3 class="beneficio-titulo">Calidad Garantizada</h3>
+            <p class="beneficio-desc">Productos originales elaborados con ingredientes de primera línea.</p>
+          </div>
+        </div>
+
+        <div class="beneficio-card">
+          <div class="beneficio-icono-box" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+            </svg>
+          </div>
+          <div>
+            <h3 class="beneficio-titulo">Compra 100% Protegida</h3>
+            <p class="beneficio-desc">Simulación completa y transparente de pedidos sin riesgos.</p>
+          </div>
+        </div>
+
+        <div class="beneficio-card">
+          <div class="beneficio-icono-box" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+          </div>
+          <div>
+            <h3 class="beneficio-titulo">Asesoría Personalizada</h3>
+            <p class="beneficio-desc">Te acompañamos a encontrar tu tono y rutina facial perfecta.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         4.3 CATEGORÍAS DE PRODUCTOS
+         ========================================================================== -->
+    <section class="seccion-categorias" id="categorias">
+      <div class="contenedor">
+        
+        <header class="seccion-encabezado">
+          <span class="seccion-subtitulo-pildora">Colecciones Especiales</span>
+          <h2 class="seccion-titulo">Explora por Categoría</h2>
+          <p class="seccion-descripcion">Encuentra cosméticos diseñados para realzar cada faceta de tu piel con acabados profesionales.</p>
+        </header>
+
+        <!-- Píldoras de Selección de Categoría -->
+        <div class="pildoras-categorias-lista" role="tablist" aria-label="Categorías de cosméticos">
+          <button type="button" class="categoria-btn activo" data-categoria="todas" role="tab" aria-selected="true">
+            <span>✨ Todas</span>
+          </button>
+          <button type="button" class="categoria-btn" data-categoria="Rostro" role="tab" aria-selected="false">
+            <span>🌸 Rostro</span>
+          </button>
+          <button type="button" class="categoria-btn" data-categoria="Labios y Ojos" role="tab" aria-selected="false">
+            <span>💄 Labios & Ojos</span>
+          </button>
+          <button type="button" class="categoria-btn" data-categoria="Cuidado Facial" role="tab" aria-selected="false">
+            <span>🌿 Cuidado Facial</span>
+          </button>
+          <button type="button" class="categoria-btn" data-categoria="Cuidado Corporal" role="tab" aria-selected="false">
+            <span>☀️ Cuidado Corporal</span>
+          </button>
+          <button type="button" class="categoria-btn" data-categoria="Accesorios y Kits" role="tab" aria-selected="false">
+            <span>🎁 Accesorios & Kits</span>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         4.4 CATÁLOGO DE PRODUCTOS (Filtros, Búsqueda, Ordenamiento y Grid)
+         ========================================================================== -->
+    <section class="seccion-catalogo" id="catalogo">
+      <div class="contenedor">
+        
+        <!-- Barra de Herramientas y Filtros -->
+        <div class="catalogo-herramientas-barra">
+          
+          <div class="catalogo-filtros-izq">
+            <!-- Buscador en tiempo real integrado -->
+            <div class="header-buscador-wrap" style="max-width: 240px;">
+              <svg class="header-buscador-icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+              <input 
+                type="search" 
+                id="input-busqueda-catalogo" 
+                class="header-buscador-input" 
+                placeholder="Filtrar por nombre..." 
+                aria-label="Buscar en el catálogo"
+              />
+            </div>
+
+            <!-- Filtro de Rango de Precio -->
+            <div class="filtro-precio-box">
+              <label for="filtro-precio-slider">Precio máx:</label>
+              <input 
+                type="range" 
+                id="filtro-precio-slider" 
+                class="slider-precio" 
+                min="20000" 
+                max="150000" 
+                step="5000" 
+                value="150000" 
+                aria-label="Filtrar por precio máximo en pesos colombianos"
+              />
+              <span class="filtro-precio-badge" id="filtro-precio-valor">$150.000</span>
+            </div>
+          </div>
+
+          <!-- Ordenamiento -->
+          <div class="catalogo-filtros-der">
+            <div class="select-orden-wrap">
+              <label for="select-orden" class="visually-hidden" style="display:none;">Ordenar productos</label>
+              <select id="select-orden" class="select-orden-estilo" aria-label="Ordenar productos">
+                <option value="destacados">⭐ Destacados</option>
+                <option value="precio-asc">💵 Precio: Menor a Mayor</option>
+                <option value="precio-desc">💎 Precio: Mayor a Menor</option>
+                <option value="nombre-asc">🔤 Nombre: A a Z</option>
+                <option value="nombre-desc">🔤 Nombre: Z a A</option>
+                <option value="rating-desc">🌟 Mejor Valorados</option>
+              </select>
+              <svg class="select-flecha-icono" viewBox="0 0 24 24" fill="none" stroke-width="2" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Barra de Conteo y Limpieza -->
+        <div class="catalogo-conteo-barra">
+          <span class="contador-productos-texto" id="contador-productos">Cargando catálogo...</span>
+          <button type="button" class="btn-limpiar-filtros-link btn-restablecer-filtros">Restablecer todos los filtros</button>
+        </div>
+
+        <!-- Grid de Tarjetas de Productos -->
+        <div class="grid-productos" id="grid-productos" role="list" aria-label="Catálogo de productos de belleza">
+          <!-- Renderizado dinámicamente por catalog.js -->
+        </div>
+
+        <!-- Estado Vacío cuando no hay coincidencias -->
+        <div class="estado-vacio" id="estado-vacio-catalogo" style="display: none;">
+          <div class="estado-vacio-icono">🔍</div>
+          <h3 class="estado-vacio-titulo">No encontramos productos coincidentes</h3>
+          <p class="estado-vacio-desc">Prueba ajustando el precio máximo, cambiando la categoría o buscando con un término diferente.</p>
+          <button type="button" class="btn-primario btn-restablecer-filtros">Ver Todo el Catálogo</button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         4.9 PREGUNTAS FRECUENTES (FAQ ACORDEÓN)
+         ========================================================================== -->
+    <section class="seccion-faq" id="faq" aria-label="Preguntas Frecuentes">
+      <div class="contenedor faq-contenedor">
+        
+        <header class="seccion-encabezado">
+          <span class="seccion-subtitulo-pildora">¿Dudas?</span>
+          <h2 class="seccion-titulo">Preguntas Frecuentes</h2>
+          <p class="seccion-descripcion">Respuestas a las consultas más comunes sobre nuestros cosméticos, envíos y políticas de compra.</p>
+        </header>
+
+        <div class="faq-lista">
+          
+          <article class="faq-item activo">
+            <button type="button" class="faq-pregunta" aria-expanded="true">
+              <span>¿Cuánto tardan los envíos en Colombia?</span>
+              <svg class="faq-icono-flecha" viewBox="0 0 24 24" fill="none" stroke-width="2" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-respuesta">
+              <p>Los envíos a ciudades principales (Bogotá, Medellín, Cali, Barranquilla) toman de 2 a 3 días hábiles. Para el resto del país, el tiempo promedio es de 3 a 5 días hábiles.</p>
+            </div>
+          </article>
+
+          <article class="faq-item">
+            <button type="button" class="faq-pregunta" aria-expanded="false">
+              <span>¿Los productos son 100% libres de crueldad animal?</span>
+              <svg class="faq-icono-flecha" viewBox="0 0 24 24" fill="none" stroke-width="2" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-respuesta">
+              <p>Totalmente. En LÚMINA BEAUTY no testeamos ingredientes ni productos terminados en animales. Todas nuestras fórmulas cuentan con certificación Cruelty Free y seleccionamos ingredientes éticos y sostenibles.</p>
+            </div>
+          </article>
+
+          <article class="faq-item">
+            <button type="button" class="faq-pregunta" aria-expanded="false">
+              <span>¿Cómo puedo saber cuál es mi tono de base o labial?</span>
+              <svg class="faq-icono-flecha" viewBox="0 0 24 24" fill="none" stroke-width="2" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-respuesta">
+              <p>Cada ficha de producto cuenta con descripciones detalladas de subtonos (cálidos, neutros o fríos) e imágenes de muestras reales (swatches). Si tienes dudas, puedes consultar en nuestra guía de aplicación.</p>
+            </div>
+          </article>
+
+          <article class="faq-item">
+            <button type="button" class="faq-pregunta" aria-expanded="false">
+              <span>¿Cómo funciona el proceso de compra en esta tienda?</span>
+              <svg class="faq-icono-flecha" viewBox="0 0 24 24" fill="none" stroke-width="2" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-respuesta">
+              <p>Esta plataforma es una tienda de demostración frontend. Te permite agregar productos a tu carrito, calcular envíos con cupón, guardar favoritos en tu navegador y simular el checkout de principio a fin sin realizar ningún cargo real ni solicitar datos bancarios.</p>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+       4.5 CARRITO DE COMPRAS (DRAWER LATERAL OFFCANVAS)
+       ========================================================================== -->
+  <aside class="drawer-lateral" id="drawer-carrito" aria-label="Carrito de compras" role="dialog" aria-modal="true">
+    
+    <div class="drawer-encabezado">
+      <h3 class="drawer-titulo">
+        <span>Bolsa de Belleza</span>
+        <span class="badge-contador badge-carrito-conteo" style="position: static;">0</span>
+      </h3>
+      <button type="button" class="btn-cerrar-drawer" id="btn-cerrar-carrito" aria-label="Cerrar carrito">✕</button>
+    </div>
+
+    <!-- Barra de meta para Envío Gratis -->
+    <div class="drawer-envio-meta">
+      <p class="texto-envio-progreso" id="texto-envio-restante">
+        Agrega productos por <strong>$120.000</strong> para envío gratis.
+      </p>
+      <div class="barra-progreso-track">
+        <div class="barra-progreso-fill" id="barra-envio-progreso"></div>
+      </div>
+    </div>
+
+    <!-- Contenido cuando el carrito está vacío -->
+    <div class="drawer-cuerpo" id="carrito-vacio-mensaje" style="display: none; align-items: center; justify-content: center; flex-direction: column; text-align: center;">
+      <div class="estado-vacio-icono">🛍️</div>
+      <h4 style="margin-bottom: 8px;">Tu bolsa está vacía</h4>
+      <p style="font-size: 0.9rem; color: rgba(56,40,45,0.7); margin-bottom: 20px;">Descubre nuestras fórmulas limpias y añade tus favoritos.</p>
+      <a href="#catalogo" class="btn-primario btn-abrir-carrito" style="padding: 10px 22px;">Explorar Tienda</a>
+    </div>
+
+    <!-- Contenido cuando tiene ítems -->
+    <div class="drawer-cuerpo" id="carrito-con-items" style="display: flex; flex-direction: column;">
+      <ul class="carrito-items-lista" id="carrito-items-lista">
+        <!-- Renderizado dinámicamente por app.js -->
+      </ul>
+    </div>
+
+    <!-- Pie del Carrito con Totales y Cupón -->
+    <div class="drawer-pie">
+      
+      <!-- Input de Cupón -->
+      <div class="cupon-wrap">
+        <input 
+          type="text" 
+          id="input-codigo-cupon" 
+          class="input-cupon" 
+          placeholder="Código de cupón (ej: LUMINA10)" 
+          aria-label="Código de cupón"
+        />
+        <button type="button" id="btn-aplicar-cupon" class="btn-aplicar-cupon">Aplicar</button>
+      </div>
+
+      <div id="cupon-activo-tag" class="cupon-activo-etiqueta" style="display: none;"></div>
+
+      <!-- Desglose Financiero -->
+      <div class="carrito-totales-desglose">
+        <div class="totales-fila">
+          <span>Subtotal:</span>
+          <span id="carrito-subtotal-val">$ 0</span>
+        </div>
+        <div class="totales-fila" id="carrito-descuento-fila" style="display: none; color: var(--color-exito);">
+          <span>Descuento aplicado:</span>
+          <span id="carrito-descuento-val">-$ 0</span>
+        </div>
+        <div class="totales-fila">
+          <span>Envío estimado:</span>
+          <span id="carrito-envio-val">$ 12.000</span>
+        </div>
+        <div class="totales-fila fila-total">
+          <span>Total Estimado:</span>
+          <span id="carrito-total-val">$ 0</span>
+        </div>
+      </div>
+
+      <button type="button" class="btn-primario btn-bloque" id="btn-finalizar-compra">
+        <span>Finalizar Pedido</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18" aria-hidden="true">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </button>
+
+    </div>
+
+  </aside>
+
+  <!-- ==========================================================================
+       4.6 FAVORITOS (DRAWER LATERAL WISHLIST)
+       ========================================================================== -->
+  <aside class="drawer-lateral" id="drawer-favoritos" aria-label="Lista de Favoritos" role="dialog" aria-modal="true">
+    
+    <div class="drawer-encabezado">
+      <h3 class="drawer-titulo">
+        <span>Mis Favoritos ❤️</span>
+      </h3>
+      <button type="button" class="btn-cerrar-drawer" id="btn-cerrar-favoritos" aria-label="Cerrar favoritos">✕</button>
+    </div>
+
+    <!-- Estado vacío de favoritos -->
+    <div class="drawer-cuerpo" id="favoritos-vacio-mensaje" style="display: none; align-items: center; justify-content: center; flex-direction: column; text-align: center;">
+      <div class="estado-vacio-icono">🤍</div>
+      <h4 style="margin-bottom: 8px;">Aún no tienes favoritos</h4>
+      <p style="font-size: 0.9rem; color: rgba(56,40,45,0.7); margin-bottom: 20px;">Toca el icono de corazón en cualquier cosmético para guardarlo aquí.</p>
+      <a href="#catalogo" class="btn-primario" style="padding: 10px 22px;">Ver Cosméticos</a>
+    </div>
+
+    <!-- Lista de favoritos con ítems -->
+    <div class="drawer-cuerpo" id="favoritos-con-items" style="display: flex; flex-direction: column;">
+      <ul class="favoritos-items-lista" id="favoritos-items-lista">
+        <!-- Renderizado dinámicamente -->
+      </ul>
+    </div>
+
+    <div class="drawer-pie">
+      <button type="button" class="btn-secundario btn-bloque" id="btn-vaciar-favoritos">
+        Vaciar Favoritos
+      </button>
+    </div>
+
+  </aside>
+
+  <!-- ==========================================================================
+       4.7 MODAL DE DETALLE DE PRODUCTO
+       ========================================================================== -->
+  <div class="modal-contenedor" id="modal-detalle-producto" role="dialog" aria-modal="true" aria-labelledby="modal-prod-nombre">
+    <div class="modal-ventana">
+      
+      <button type="button" class="btn-cerrar-modal" id="btn-cerrar-modal-producto" aria-label="Cerrar modal de producto">✕</button>
+
+      <div class="modal-producto-grid">
+        
+        <div class="modal-producto-imagen-col">
+          <span class="producto-badge badge-bestseller" id="modal-prod-badge" style="display: none;">Bestseller</span>
+          <img id="modal-prod-img" src="" alt="Detalle de producto" />
+        </div>
+
+        <div class="modal-producto-info-col">
+          <span class="modal-categoria-tag" id="modal-prod-categoria">Categoría</span>
+          <h2 class="modal-producto-titulo" id="modal-prod-nombre">Nombre del Cosmético</h2>
+
+          <div class="modal-rating-row" id="modal-prod-rating">
+            <!-- Rating -->
+          </div>
+
+          <div class="modal-precios-row">
+            <span class="modal-precio-actual" id="modal-prod-precio">$ 0</span>
+            <span class="modal-precio-original" id="modal-prod-precio-original" style="display: none;">$ 0</span>
+          </div>
+
+          <p class="modal-descripcion-texto" id="modal-prod-descripcion">
+            Descripción sensorial y técnica del cosmético.
+          </p>
+
+          <div class="modal-bloque-extra">
+            <h4>Modo de Aplicación:</h4>
+            <p id="modal-prod-modouso">Consejos de uso y rutina.</p>
+          </div>
+
+          <div class="modal-bloque-extra">
+            <h4>Ingredientes Clave:</h4>
+            <div class="modal-ingredientes-pildoras" id="modal-prod-ingredientes">
+              <!-- Píldoras de ingredientes -->
+            </div>
+          </div>
+
+          <div class="modal-acciones-compra">
+            <div class="selector-cantidad-grande">
+              <button type="button" id="modal-prod-btn-menos" aria-label="Reducir cantidad">−</button>
+              <input type="text" id="modal-prod-cantidad" value="1" readonly aria-label="Cantidad seleccionada" />
+              <button type="button" id="modal-prod-btn-mas" aria-label="Aumentar cantidad">+</button>
+            </div>
+
+            <button type="button" class="btn-primario" id="modal-prod-btn-agregar" style="flex: 1;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18" aria-hidden="true">
+                <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <path d="M16 10a4 4 0 0 1-8 0"></path>
+              </svg>
+              <span>Añadir a la Bolsa</span>
+            </button>
+
+            <button type="button" class="btn-modal-favorito" id="modal-prod-btn-fav" aria-label="Añadir a favoritos" title="Añadir a favoritos">
+              <svg class="icono-corazon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       4.8 SIMULADOR DE PROCESO DE COMPRA (MODAL CHECKOUT DEMOSTRATIVO)
+       ========================================================================== -->
+  <div class="modal-contenedor" id="modal-checkout" role="dialog" aria-modal="true" aria-labelledby="checkout-titulo-modal">
+    <div class="modal-ventana modal-checkout-ventana">
+      
+      <button type="button" class="btn-cerrar-modal" id="btn-cerrar-checkout" aria-label="Cerrar simulación de checkout">✕</button>
+
+      <!-- Pantalla del Formulario de Pedido -->
+      <div id="checkout-contenido-formulario">
+        
+        <h2 id="checkout-titulo-modal" class="seccion-titulo" style="font-size: 1.8rem; margin-bottom: 8px;">Simulador de Compra</h2>
+        
+        <!-- Aviso Demostrativo Obligatorio según Sección 9 de la Especificación -->
+        <div class="checkout-aviso-demostrativo">
+          <strong>ℹ️ Entorno Demostrativo:</strong> Esta tienda virtual es una simulación de comercio electrónico frontend. No se realizarán cargos monetarios a tus cuentas ni se recopilarán datos bancarios reales.
+        </div>
+
+        <form id="form-checkout-demostrativo">
+          <div class="checkout-grid">
+            
+            <!-- Columna Formulario de Envío y Pago -->
+            <div class="checkout-seccion-form">
+              <h4>1. Datos de Entrega</h4>
+              
+              <div class="form-fila-doble">
+                <div class="form-grupo">
+                  <label for="checkout-nombre" class="form-label">Nombre Completo *</label>
+                  <input type="text" id="checkout-nombre" class="form-input" required placeholder="Ej: Valentina Morales" />
+                </div>
+                <div class="form-grupo">
+                  <label for="checkout-telefono" class="form-label">Teléfono Móvil *</label>
+                  <input type="tel" id="checkout-telefono" class="form-input" required placeholder="Ej: 310 123 4567" />
+                </div>
+              </div>
+
+              <div class="form-grupo">
+                <label for="checkout-email" class="form-label">Correo Electrónico *</label>
+                <input type="email" id="checkout-email" class="form-input" required placeholder="tucorreo@ejemplo.com" />
+              </div>
+
+              <div class="form-fila-doble">
+                <div class="form-grupo">
+                  <label for="checkout-ciudad" class="form-label">Ciudad / Municipio *</label>
+                  <input type="text" id="checkout-ciudad" class="form-input" required placeholder="Ej: Bogotá D.C." />
+                </div>
+                <div class="form-grupo">
+                  <label for="checkout-departamento" class="form-label">Departamento *</label>
+                  <select id="checkout-departamento" class="form-select" required>
+                    <option value="Cundinamarca">Cundinamarca</option>
+                    <option value="Antioquia">Antioquia</option>
+                    <option value="Valle del Cauca">Valle del Cauca</option>
+                    <option value="Santander">Santander</option>
+                    <option value="Atlántico">Atlántico</option>
+                    <option value="Otro">Otro departamento</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-grupo">
+                <label for="checkout-direccion" class="form-label">Dirección de Entrega *</label>
+                <input type="text" id="checkout-direccion" class="form-input" required placeholder="Calle, Carrera, Edificio o Apto" />
+              </div>
+
+              <h4 style="margin-top: 24px;">2. Método de Pago Simulado</h4>
+              <div class="checkout-metodos-pago">
+                <label class="metodo-pago-opcion">
+                  <input type="radio" name="metodo-pago" value="contraentrega" checked />
+                  <div class="metodo-pago-label">
+                    <span>💵 Pago Contra Entrega Simulado</span>
+                    <small>Cancela en efectivo o datáfono al recibir tu paquete.</small>
+                  </div>
+                </label>
+
+                <label class="metodo-pago-opcion">
+                  <input type="radio" name="metodo-pago" value="nequi" />
+                  <div class="metodo-pago-label">
+                    <span>📱 Transferencia Nequi / Daviplata Simulado</span>
+                    <small>Confirmación automática inmediata para la simulación.</small>
+                  </div>
+                </label>
+
+                <label class="metodo-pago-opcion">
+                  <input type="radio" name="metodo-pago" value="tarjeta" />
+                  <div class="metodo-pago-label">
+                    <span>💳 Tarjeta Demostrativa (Simulación)</span>
+                    <small>No solicita claves ni números de seguridad sensibles.</small>
+                  </div>
+                </label>
+              </div>
+
+            </div>
+
+            <!-- Columna Resumen de Pedido -->
+            <div class="checkout-resumen-caja">
+              <h4 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 16px;">Resumen del Pedido</h4>
+              
+              <div class="checkout-resumen-items-lista" id="checkout-resumen-items">
+                <!-- Se llena con app.js -->
+              </div>
+
+              <div class="checkout-totales-bloque">
+                <div class="checkout-resumen-fila">
+                  <span>Subtotal:</span>
+                  <span id="checkout-subtotal-val">$ 0</span>
+                </div>
+                <div class="checkout-resumen-fila">
+                  <span>Envío:</span>
+                  <span id="checkout-envio-val">Gratis</span>
+                </div>
+                <div class="checkout-resumen-fila" style="font-size: 1.15rem; font-weight: 700; color: var(--color-contraste-ciruela); margin-top: 6px;">
+                  <span>Total a Pagar:</span>
+                  <span id="checkout-total-val">$ 0</span>
+                </div>
+              </div>
+
+              <button type="submit" class="btn-primario btn-bloque">
+                Confirmar Pedido Demostrativo
+              </button>
+            </div>
+
+          </div>
+        </form>
+
+      </div>
+
+      <!-- Pantalla de Confirmación de Pedido Exitoso -->
+      <div id="checkout-confirmacion-exito" class="checkout-confirmacion-box" style="display: none;">
+        <div class="confirmacion-icono-anim">✓</div>
+        <h2 class="confirmacion-titulo">¡Gracias por tu pedido de prueba!</h2>
+        <p style="color: rgba(56,40,45,0.75); margin-bottom: 12px;">Tu simulación de compra ha sido generada exitosamente.</p>
+        
+        <div class="confirmacion-orden-badge" id="checkout-orden-id">#LUM-94821</div>
+
+        <div class="confirmacion-datos-resumen" id="checkout-datos-cliente-confirmados">
+          <!-- Datos confirmados -->
+        </div>
+
+        <button type="button" class="btn-primario" id="btn-checkout-seguir-comprando">
+          Volver a la Tienda
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       4.9 PIE DE PÁGINA (FOOTER COMPLETO)
+       ========================================================================== -->
+  <footer class="footer-principal" id="contacto">
+    <div class="contenedor">
+      
+      <div class="footer-top">
+        
+        <!-- Columna Marca -->
+        <div>
+          <span class="footer-logo-texto">LÚMINA</span>
+          <span class="footer-logo-subtexto">BEAUTY • ÉLIXIR</span>
+          <p class="footer-acerca-desc">
+            Cosméticos de alta pureza y formulaciones botánicas inspiradas en la luminosidad de tu piel. Belleza consciente, sostenible y libre de crueldad.
+          </p>
+          <div class="footer-redes">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="btn-red-social" aria-label="Instagram de Lúmina Beauty">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" class="btn-red-social" aria-label="TikTok de Lúmina Beauty">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path></svg>
+            </a>
+            <a href="https://whatsapp.com" target="_blank" rel="noopener noreferrer" class="btn-red-social" aria-label="Atención por WhatsApp">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Columna Enlaces Rápidos -->
+        <div>
+          <h3 class="footer-col-titulo">Colecciones</h3>
+          <ul class="footer-links-lista">
+            <li><a href="#catalogo">Bases y Correctores</a></li>
+            <li><a href="#catalogo">Labiales Velvet</a></li>
+            <li><a href="#catalogo">Sérums Iluminadores</a></li>
+            <li><a href="#catalogo">Cuidado Corporal</a></li>
+            <li><a href="#catalogo">Sets de Regalo</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna Políticas -->
+        <div>
+          <h3 class="footer-col-titulo">Políticas & Ayuda</h3>
+          <ul class="footer-links-lista">
+            <li><a href="#faq">Preguntas Frecuentes</a></li>
+            <li><a href="#beneficios">Tiempos de Envío</a></li>
+            <li><a href="#beneficios">Garantía de Satisfacción</a></li>
+            <li><a href="#inicio">Términos del Servicio</a></li>
+            <li><a href="#inicio">Política de Privacidad</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna Newsletter -->
+        <div>
+          <h3 class="footer-col-titulo">Comunidad LÚMINA</h3>
+          <p style="font-size: 0.88rem; color: rgba(255,253,251,0.75); margin-bottom: 12px;">
+            Suscríbete para recibir lanzamientos exclusivos y un 10% de descuento en tu primera compra con el cupón <strong>LUMINA10</strong>.
+          </p>
+          <form class="footer-newsletter-form" id="form-newsletter">
+            <div class="newsletter-input-group">
+              <input 
+                type="email" 
+                id="input-newsletter-email" 
+                class="newsletter-input" 
+                placeholder="Ingresa tu correo..." 
+                required 
+                aria-label="Correo para newsletter"
+              />
+              <button type="submit" class="btn-newsletter-enviar">Unirme</button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+
+      <!-- Barra de Descargo Demostrativo -->
+      <div class="footer-bottom">
+        <div class="footer-bottom-grid">
+          <div>
+            © 2026 LÚMINA BEAUTY. Todos los derechos reservados.
+          </div>
+          <div class="footer-aviso-demostrativo">
+            ✨ Proyecto demostrativo frontend: desarrollado con HTML5 semántico, CSS3 Vanilla y JavaScript puro según especificación técnica.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       ELEMENTOS GLOBALES: BACKDROP Y TOASTS
+       ========================================================================== -->
+  <div class="backdrop-global" id="backdrop-global"></div>
+  <div class="contenedor-toast" id="contenedor-notificaciones-toast" aria-live="assertive"></div>
+
+  <!-- ==========================================================================
+       SCRIPTS JAVASCRIPT MODULARES (ESPECIFICACIÓN SECCIÓN 5.4)
+       ========================================================================== -->
+  <script src="js/products.js"></script>
+  <script src="js/favorites.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/catalog.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+</html>

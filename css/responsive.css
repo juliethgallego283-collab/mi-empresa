@@ -1,0 +1,390 @@
+/* ==========================================================================
+   LÚMINA BEAUTY - RESPONSIVE.CSS
+   Adaptación según la especificación:
+   - Móvil: hasta 600 px
+   - Tableta: 601–900 px
+   - Escritorio: más de 900 px
+   ========================================================================== */
+
+/* ==========================================================================
+   Tabletas y Pantallas Medianas (Hasta 900px)
+   ========================================================================== */
+@media screen and (max-width: 900px) {
+  :root {
+    --header-altura: 68px;
+  }
+
+  /* Header y Menú Móvil */
+  .btn-menu-hamburguesa {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radio-sm);
+    color: var(--color-contraste-ciruela);
+    background-color: var(--color-principal-rosa);
+    margin-left: 4px;
+  }
+
+  .btn-menu-hamburguesa svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: var(--header-altura);
+    left: 0;
+    right: 0;
+    background-color: var(--color-blanco-puro);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px 30px;
+    gap: 18px;
+    border-bottom: 1px solid var(--color-acento-borde);
+    box-shadow: var(--sombra-media);
+    transform: translateY(-120%);
+    opacity: 0;
+    pointer-events: none;
+    transition: all var(--transicion-suave);
+    z-index: 99;
+  }
+
+  .nav-menu.activo {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .nav-link {
+    font-size: 1.05rem;
+    width: 100%;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--color-acento-hover);
+  }
+
+  .header-buscador-wrap {
+    display: none; /* Se visualiza dentro del catálogo en pantallas medianas y móviles */
+  }
+
+  /* Hero Section */
+  .hero-seccion {
+    padding: 40px 0 60px 0;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .hero-contenido {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .hero-titulo {
+    font-size: 2.7rem;
+  }
+
+  .hero-botones {
+    justify-content: center;
+  }
+
+  .hero-destacados-lista {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .hero-imagen-marco {
+    max-width: 540px;
+    margin: 0 auto;
+  }
+
+  .hero-flotante-badge {
+    bottom: -15px;
+    left: 20px;
+  }
+
+  /* Franja de Beneficios */
+  .beneficios-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  /* Grid Catálogo */
+  .grid-productos {
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 20px;
+  }
+
+  /* Modales */
+  .modal-producto-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 26px;
+  }
+
+  .modal-checkout-ventana {
+    padding: 24px;
+  }
+
+  .checkout-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  /* Footer */
+  .footer-top {
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+  }
+}
+
+/* ==========================================================================
+   Móvil (Hasta 600px)
+   ========================================================================== */
+@media screen and (max-width: 600px) {
+  :root {
+    --header-altura: 64px;
+    --topbar-altura: 48px;
+  }
+
+  .contenedor {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .top-bar-anuncio {
+    font-size: 0.76rem;
+    line-height: 1.35;
+    padding: 6px 12px;
+  }
+
+  .logo-texto {
+    font-size: 1.35rem;
+  }
+
+  .logo-subtexto {
+    font-size: 0.55rem;
+    letter-spacing: 0.25em;
+  }
+
+  .btn-icono-header {
+    width: 38px;
+    height: 38px;
+  }
+
+  .header-acciones {
+    gap: 6px;
+  }
+
+  /* Hero */
+  .hero-seccion {
+    padding: 28px 0 46px 0;
+  }
+
+  .hero-tag {
+    font-size: 0.78rem;
+    padding: 6px 14px;
+  }
+
+  .hero-titulo {
+    font-size: 2.15rem;
+  }
+
+  .hero-descripcion {
+    font-size: 0.98rem;
+  }
+
+  .hero-botones {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-botones .btn-primario,
+  .hero-botones .btn-secundario {
+    width: 100%;
+  }
+
+  .hero-destacados-lista {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .hero-flotante-badge {
+    position: static;
+    margin-top: 16px;
+    border-radius: var(--radio-sm);
+  }
+
+  /* Beneficios en móvil */
+  .beneficios-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .beneficio-card {
+    background-color: var(--color-fondo-marfil);
+    padding: 14px;
+    border-radius: var(--radio-sm);
+  }
+
+  /* Píldoras de Categoría */
+  .seccion-categorias {
+    padding: 40px 0 20px 0;
+  }
+
+  .seccion-titulo {
+    font-size: 1.75rem;
+  }
+
+  .pildoras-categorias-lista {
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .pildoras-categorias-lista::-webkit-scrollbar {
+    display: none;
+  }
+
+  .categoria-btn {
+    flex-shrink: 0;
+    padding: 8px 16px;
+    font-size: 0.85rem;
+  }
+
+  /* Barra de herramientas catálogo */
+  .catalogo-herramientas-barra {
+    padding: 16px;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .catalogo-filtros-izq,
+  .catalogo-filtros-der {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+  }
+
+  .filtro-precio-box {
+    justify-content: space-between;
+  }
+
+  .slider-precio {
+    flex: 1;
+  }
+
+  .select-orden-estilo {
+    width: 100%;
+  }
+
+  /* Grid productos 2 columnas cómodas en móvil moderno */
+  .grid-productos {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .tarjeta-contenido {
+    padding: 12px;
+  }
+
+  .producto-categoria {
+    font-size: 0.7rem;
+  }
+
+  .producto-nombre {
+    font-size: 0.88rem;
+    min-height: 2.4em;
+    margin-bottom: 6px;
+  }
+
+  .producto-rating {
+    margin-bottom: 8px;
+  }
+
+  .rating-total {
+    display: none;
+  }
+
+  .precio-actual {
+    font-size: 1.1rem;
+  }
+
+  .btn-primario-suave {
+    padding: 8px 12px;
+    font-size: 0.82rem;
+  }
+
+  .btn-vista-rapida {
+    display: none; /* En móvil se hace clic directamente en el título o foto */
+  }
+
+  /* Drawers a pantalla completa en móvil */
+  .drawer-lateral {
+    max-width: 100%;
+  }
+
+  /* Modales */
+  .modal-ventana {
+    max-height: 94vh;
+    border-radius: var(--radio-md);
+  }
+
+  .modal-producto-grid {
+    padding: 20px 16px;
+  }
+
+  .modal-producto-titulo {
+    font-size: 1.45rem;
+  }
+
+  .modal-precio-actual {
+    font-size: 1.5rem;
+  }
+
+  .modal-acciones-compra {
+    flex-wrap: wrap;
+  }
+
+  .modal-acciones-compra .btn-primario {
+    flex: 1;
+  }
+
+  .form-fila-doble {
+    grid-template-columns: 1fr;
+  }
+
+  /* Footer */
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .footer-bottom-grid {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+
+  /* Toasts */
+  .contenedor-toast {
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+  }
+
+  .toast {
+    min-width: unset;
+    width: 100%;
+  }
+}
